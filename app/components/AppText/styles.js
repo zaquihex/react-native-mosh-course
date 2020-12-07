@@ -1,15 +1,6 @@
-import React from 'react';
-import { Text, Platform, StyleSheet } from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
-function AppText({children}) {
-    return (
-        <Text style={styles.text}>{children}</Text>
-    );
-}
-
-
-
-const styles = StyleSheet.create({
+export default StyleSheet.create({
     text: {
         ...Platform.select({
             ios: {
@@ -23,5 +14,3 @@ const styles = StyleSheet.create({
         })
     }
 });
-
-export default AppText;
