@@ -1,21 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import {View} from 'react-native';
+import AppText from './app/components/AppText';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-      <StatusBar style="auto" />
-    </View>
+        <View style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+            <MaterialCommunityIcons name="email" size={60} color="dodgerblue" />
+            <AppText> Example of a text</AppText>
+        </View>
   );
+  // return <ViewImageScreen />
+  //return <WelcomeScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
